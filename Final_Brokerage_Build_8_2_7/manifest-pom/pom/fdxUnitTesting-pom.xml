@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.fd.brokerage</groupId>
+		<artifactId>fdBrokerage</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../fdBrokerage/pom.xml</relativePath>
+	</parent>
+	<groupId>fdxUnitTesting</groupId>
+	<artifactId>fdxUnitTesting</artifactId>
+	<name>FDX Unit Testing</name>
+	<description>FDX Unit Testing</description>
+	<version>${fdxlibraries.ut.version}</version>
+	
+	<dependencies>
+		<dependency>
+            <groupId>fdxObjectParser</groupId>
+            <artifactId>fdxObjectParser</artifactId>
+			<scope>provided</scope>
+        </dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>*.txt</exclude>
+						<exclude>*.xml</exclude>
+						<exclude>*.pdf</exclude>
+						<exclude>*.properties</exclude>
+						<exclude>*.wsdd</exclude>
+						<exclude>*.xsd</exclude>
+						<exclude>*.jks</exclude>
+						<exclude>*.wsdl</exclude>
+					</excludes>
+					<archive>
+						<manifestEntries>
+							<Class-Path>.</Class-Path>
+							<SCM-Revision>${scm.revision}</SCM-Revision>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+	<!--<scm>
+		<connection>scm:svn:http://10.11.100.160:85/folio/Brokerage</connection>
+		<developerConnection>scm:svn:http://10.11.100.160:85/folio/Brokerage</developerConnection>
+		<url>scm:svn:http://10.11.100.160:85/folio/Brokerage</url>
+	</scm>-->
+	
+</project>

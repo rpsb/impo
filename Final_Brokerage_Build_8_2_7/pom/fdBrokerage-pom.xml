@@ -1,0 +1,1229 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+        <groupId>com.fd.brokerage</groupId>
+        <artifactId>fdBrokerage</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <packaging>pom</packaging>
+        <properties>
+                <project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
+                <java.version>1.7</java.version>
+                <maven.compiler.source>${java.version}</maven.compiler.source>
+                <maven.compiler.target>${java.version}</maven.compiler.target>
+
+                <javax.validation.version>1.0.0.GA</javax.validation.version>
+                <spring.version>4.3.9.RELEASE</spring.version>
+                <axis.version>1.4</axis.version>
+                <jackson.version>2.9.5</jackson.version>
+                <wordnik.swagger.version>1.3.10</wordnik.swagger.version>
+                <io.swagger.version>1.5.16</io.swagger.version>
+                <swagger.jaxrs2.version>1.3.10</swagger.jaxrs2.version>
+                <swagger.jaxrs.version>1.5.16</swagger.jaxrs.version>
+                <springfox.swagger2.version>2.8.0</springfox.swagger2.version>
+
+                <commons.cli.version>1.3.1</commons.cli.version>
+                <commons.dbcp.version>1.3</commons.dbcp.version>
+                <commons.discover.version>0.5</commons.discover.version>
+                <commons.file.upload.version>1.3.3</commons.file.upload.version>
+                <commons.lang.version>2.1</commons.lang.version>
+                <commons.lang3.version>3.4</commons.lang3.version>
+                <commons.pool.version>1.6</commons.pool.version>
+                <commons.httpclient.version>3.1</commons.httpclient.version>
+                <slf4j.version>1.6.3</slf4j.version>
+                <log4j.version>2.8.2</log4j.version>
+                <apache.poi.version>3.17</apache.poi.version>
+                <xmlbeans.version>2.6.0</xmlbeans.version>
+                <stax.api.version>1.0.1</stax.api.version>
+                <curvesapi.version>1.04</curvesapi.version>
+                <apache.ant.version>1.8.2</apache.ant.version>
+                <apache.santuario.version>1.4.4</apache.santuario.version>
+                <javassist.version>3.21.0-GA</javassist.version>
+                <org.json.version>20160212</org.json.version>
+                <quickfixj.version>1.5.3</quickfixj.version>
+                <xml.apis.version>1.4.01</xml.apis.version>
+                <memcached.version>2.6</memcached.version>
+                <exolab.castor.version>1.3</exolab.castor.version>
+                <ibm.j2ee.version>6.0</ibm.j2ee.version>
+                <ibm.runtime.version>10.0.0</ibm.runtime.version>
+                <ibm.prereq.version>1.6.2</ibm.prereq.version>
+                <ibm.soap.version>2.4.0</ibm.soap.version>
+                <ibm.objectgrid.version>6.1</ibm.objectgrid.version>
+                <ibm.server.version>5.0.0</ibm.server.version>
+                <ibm.jmqi.version>5.0.0</ibm.jmqi.version>
+                <ibm.mq.version>8.0.0.0</ibm.mq.version>
+                <ibm.logbrxml.version>1.0</ibm.logbrxml.version>
+                <ibm.ws.jpa.version>9.0.0</ibm.ws.jpa.version>
+                <ibm.jaxrs.version>2.0.0</ibm.jaxrs.version>
+                <ibm.jackson.version>1.6.2</ibm.jackson.version>
+                <ibm.db2.jdbc.version>1.0.0</ibm.db2.jdbc.version>
+                <ibm.xss4j.version>1.0</ibm.xss4j.version>
+                <ibm.mqjms.version>8.0.0.0</ibm.mqjms.version>
+
+                <hibernate.validator.version>4.3.2.Final</hibernate.validator.version>
+                <hibernate.core.version>4.2.7.Final</hibernate.core.version>
+                <hamcrest.core.version>1.3</hamcrest.core.version>
+                <mockito.version>1.10.19</mockito.version>
+                <powermock.version>1.7.3</powermock.version>
+
+                <objenesis.version>2.1</objenesis.version>
+                <wss4j.version>1.5.12</wss4j.version>
+                <opencsv.version>2.2</opencsv.version>
+                <commons.collections4.version>4.1</commons.collections4.version>
+                <commons.codec.version>1.10</commons.codec.version>
+                <org.restlet.version>1.1.10</org.restlet.version>
+                <org.restlet.jee.version>2.3.12</org.restlet.jee.version>
+                <lowagie.itext.version>2.1.7</lowagie.itext.version>
+                <jcommon.version>1.0.23</jcommon.version>
+                <jfreechart.version>1.0.19</jfreechart.version>
+                <junit.default.version>4.12</junit.default.version>
+                <jacoco.agent.version>0.7.9</jacoco.agent.version>
+                <jasperreports.version>6.1.0</jasperreports.version>
+                <sun.mail.version>1.4.2</sun.mail.version>
+                <groovy.all.version>2.4.15</groovy.all.version>
+
+                <xalan.version>1.0</xalan.version>
+                <ipdiscovery.version>1.0</ipdiscovery.version>
+                <modelmapper.version>1.1.0</modelmapper.version>
+                <noggit.version>0.5</noggit.version>
+                <buildnumbermaven.version>1.4</buildnumbermaven.version>
+                <!-- FDSSO lib jars -->
+                <javax.activation.version>1.0.2</javax.activation.version>
+                <esapi.version>1.0.2</esapi.version>
+                <idpdiscovery.version>1.0</idpdiscovery.version>
+                <mail.version>1.3.1</mail.version>
+                <openfedlib.version>1.0</openfedlib.version>
+                <opensso.sharedlib.version>1.0</opensso.sharedlib.version>
+                <relaxngDatatype.version>1.0</relaxngDatatype.version>
+                <webservicesapi.version>1.5</webservicesapi.version>
+                <webservicesrt.version>1.5</webservicesrt.version>
+                <xercesImpl.version>2.12.0</xercesImpl.version>
+                <xsdlib.version>20060928</xsdlib.version>
+                <apache.serialzer.sso.version>2.9.1</apache.serialzer.sso.version>
+                <xml.apis.sso.version>1.4.01</xml.apis.sso.version>
+                <jaxpri.sso.version>1.4.5</jaxpri.sso.version>
+                <!-- FDSSO lib jars end -->
+                <!-- FDX Libraries -->
+		<fdxlibraries.version>0.0.1</fdxlibraries.version>
+				<fdxlibraries.op.version>0.0.1</fdxlibraries.op.version>
+				<fdxlibraries.ut.version>0.0.1</fdxlibraries.ut.version>
+				<fdxlibraries.fu.version>0.0.1</fdxlibraries.fu.version>
+				<fdxlibraries.fq.version>0.0.1</fdxlibraries.fq.version>
+				<fdxlibraries.pa.version>0.0.1</fdxlibraries.pa.version> 
+				<fdxlibraries.fe.version>0.0.1</fdxlibraries.fe.version>
+				<fdxlibraries.bo.version>0.0.1</fdxlibraries.bo.version>
+				<fdxlibraries.pt.version>0.0.1</fdxlibraries.pt.version> 
+				<fdxlibraries.vc.version>0.0.1</fdxlibraries.vc.version>
+				<fdxlibraries.ac.version>0.0.1</fdxlibraries.ac.version>
+				<fdxlibraries.ct.version>0.0.1</fdxlibraries.ct.version>
+				<fdxlibraries.bw.version>0.0.1</fdxlibraries.bw.version> 
+				<fdxlibraries.pe.version>0.0.1</fdxlibraries.pe.version>
+				<fdxlibraries.po.version>0.0.1</fdxlibraries.po.version> 
+				<fdxlibraries.af.version>0.0.1</fdxlibraries.af.version> 
+				<fdxlibraries.ap.version>0.0.1</fdxlibraries.ap.version> 
+				<fdxlibraries.bp.version>0.0.1</fdxlibraries.bp.version> 
+				<fdxlibraries.co.version>0.0.1</fdxlibraries.co.version>
+				<fdxlibraries.bc.version>0.0.1</fdxlibraries.bc.version>
+				<fdxlibraries.fb.version>0.0.1</fdxlibraries.fb.version> 
+				<fdxlibraries.bu.version>0.0.1</fdxlibraries.bu.version> 
+				<fdxlibraries.ba.version>0.0.1</fdxlibraries.ba.version> 
+				<fdxlibraries.dm.version>0.0.1</fdxlibraries.dm.version> 
+				<fdxlibraries.ep.version>0.0.1</fdxlibraries.ep.version> 
+				<fdxlibraries.tp.version>0.0.1</fdxlibraries.tp.version> 
+				<fdxlibraries.fp.version>0.0.1</fdxlibraries.fp.version>
+				<fdxlibraries.ft.version>0.0.1</fdxlibraries.ft.version> 
+				<fdxlibraries.pf.version>0.0.1</fdxlibraries.pf.version>
+				<fdxlibraries.mf.version>0.0.1</fdxlibraries.mf.version> 
+				<fdxlibraries.sa.version>0.0.1</fdxlibraries.sa.version>
+				<fdxlibraries.sl.version>0.0.1</fdxlibraries.sl.version> 
+				<fdxlibraries.tl.version>0.0.1</fdxlibraries.tl.version> 
+				<fdxlibraries.te.version>0.0.1</fdxlibraries.te.version> 
+				<fdxlibraries.fa.version>0.0.1</fdxlibraries.fa.version> 
+				<fdxlibraries.ws.version>0.0.1</fdxlibraries.ws.version>
+				<fdxlibraries.ae.version>0.0.1</fdxlibraries.ae.version>
+				<fdxlibraries.ww.version>0.0.1</fdxlibraries.ww.version>
+				<fdxlibraries.ss.version>0.0.1</fdxlibraries.ss.version> 
+				<fdxlibraries.we.version>0.0.1</fdxlibraries.we.version> 
+				<fdxlibraries.eb.version>0.0.1</fdxlibraries.eb.version> 
+				<fdxlibraries.us.version>0.0.1</fdxlibraries.us.version>
+				<fdxlibraries.ej.version>0.0.1</fdxlibraries.ej.version> 
+				<fdxlibraries.os.version>0.0.1</fdxlibraries.os.version>
+				<scm.revision>81746</scm.revision>
+                <!-- FDX Libraries end -->
+        </properties>
+        <dependencyManagement>
+                <!-- Spring framework related jars -->
+                <dependencies>
+                        <dependency>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-core</artifactId>
+                                <version>${spring.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-tx</artifactId>
+                                <version>${spring.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-jdbc</artifactId>
+                                <version>${spring.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-context</artifactId>
+                                <version>${spring.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-beans</artifactId>
+                                <version>${spring.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-aop</artifactId>
+                                <version>${spring.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-orm</artifactId>
+                                <version>${spring.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-test</artifactId>
+                                <version>${spring.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-webmvc</artifactId>
+                                <version>${spring.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-web</artifactId>
+                                <version>${spring.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>io.springfox</groupId>
+                                <artifactId>springfox-swagger2</artifactId>
+                                <version>${springfox.swagger2.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- Spring framework related jars end -->
+                        <!-- Hibernate related videos -->
+                        <dependency>
+                                <groupId>org.hibernate</groupId>
+                                <artifactId>hibernate-validator</artifactId>
+                                <version>${hibernate.validator.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.hibernate</groupId>
+                                <artifactId>hibernate-core</artifactId>
+                                <version>${hibernate.core.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- Hibernate related videos end -->
+                        <!-- mockito -->
+                        <dependency>
+                                <groupId>org.hamcrest</groupId>
+                                <artifactId>hamcrest-core</artifactId>
+                                <version>${hamcrest.core.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.mockito</groupId>
+                                <artifactId>mockito-core</artifactId>
+                                <version>${mockito.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.objenesis</groupId>
+                                <artifactId>objenesis</artifactId>
+                                <version>${objenesis.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.powermock</groupId>
+                                <artifactId>powermock-api-mockito-common</artifactId>
+                                <version>${powermock.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.powermock</groupId>
+                                <artifactId>powermock-api-mockito</artifactId>
+                                <version>${powermock.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.powermock</groupId>
+                                <artifactId>powermock-api-support</artifactId>
+                                <version>${powermock.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.powermock</groupId>
+                                <artifactId>powermock-core</artifactId>
+                                <version>${powermock.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.powermock</groupId>
+                                <artifactId>powermock-module-junit4</artifactId>
+                                <version>${powermock.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.powermock</groupId>
+                                <artifactId>powermock-module-junit4-common</artifactId>
+                                <version>${powermock.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.powermock</groupId>
+                                <artifactId>powermock-reflect</artifactId>
+                                <version>${powermock.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+                        <!-- mockito ends -->
+
+                        <!-- axis related jars -->
+                        <dependency>
+                                <groupId>axis</groupId>
+                                <artifactId>axis</artifactId>
+                                <version>${axis.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- axis related jars end -->
+
+                        <!-- fasterxml related jars -->
+                        <dependency>
+                                <groupId>com.fasterxml.jackson.core</groupId>
+                                <artifactId>jackson-annotations</artifactId>
+                                <version>${jackson.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.fasterxml.jackson.core</groupId>
+                                <artifactId>jackson-core</artifactId>
+                                <version>${jackson.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.fasterxml.jackson.core</groupId>
+                                <artifactId>jackson-databind</artifactId>
+                                <version>${jackson.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- fasterxml related jars end -->
+
+                        <!-- swagger related jars -->
+                        <dependency>
+                                <groupId>com.wordnik</groupId>
+                                <artifactId>swagger-annotations</artifactId>
+                                <version>${wordnik.swagger.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>io.swagger</groupId>
+                                <artifactId>swagger-annotations</artifactId>
+                                <version>${io.swagger.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.wordnik</groupId>
+                                <artifactId>swagger-jaxrs_2.10</artifactId>
+                                <version>${swagger.jaxrs2.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>io.swagger</groupId>
+                                <artifactId>swagger-jaxrs</artifactId>
+                                <version>${swagger.jaxrs.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- swagger related jars end -->
+
+                        <!-- commons framework related jars -->
+                        <dependency>
+                                <groupId>commons-cli</groupId>
+                                <artifactId>commons-cli</artifactId>
+                                <version>${commons.cli.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>commons-dbcp</groupId>
+                                <artifactId>commons-dbcp</artifactId>
+                                <version>${commons.dbcp.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>commons-discovery</groupId>
+                                <artifactId>commons-discovery</artifactId>
+                                <version>${commons.discover.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>commons-fileupload</groupId>
+                                <artifactId>commons-fileupload</artifactId>
+                                <version>${commons.file.upload.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>commons-lang</groupId>
+                                <artifactId>commons-lang</artifactId>
+                                <version>${commons.lang.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>commons-pool</groupId>
+                                <artifactId>commons-pool</artifactId>
+                                <version>${commons.pool.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.apache.commons</groupId>
+                                <artifactId>commons-lang3</artifactId>
+                                <version>${commons.lang3.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>commons-httpclient</groupId>
+                                <artifactId>commons-httpclient</artifactId>
+                                <version>${commons.httpclient.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>org.apache.commons</groupId>
+                                <artifactId>commons-collections4</artifactId>
+                                <version>${commons.collections4.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>commons-codec</groupId>
+                                <artifactId>commons-codec</artifactId>
+                                <version>${commons.codec.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>org.restlet.jee</groupId>
+                                <artifactId>org.restlet</artifactId>
+                                <version>${org.restlet.jee.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.restlet</groupId>
+                                <artifactId>ext.json</artifactId>
+                                <version>${org.restlet.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.sun.mail</groupId>
+                                <artifactId>mail-impl</artifactId>
+                                <version>${sun.mail.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>org.codehaus.groovy</groupId>
+                                <artifactId>groovy-all</artifactId>
+                                <version>${groovy.all.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- commons framework related jars end -->
+
+                        <!-- logging framework related jars -->
+                        <dependency>
+                                <groupId>org.slf4j</groupId>
+                                <artifactId>slf4j-api</artifactId>
+                                <version>${slf4j.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.apache.logging.log4j</groupId>
+                                <artifactId>log4j-1.2-api</artifactId>
+                                <version>${log4j.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.apache.logging.log4j</groupId>
+                                <artifactId>log4j-api</artifactId>
+                                <version>${log4j.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.apache.logging.log4j</groupId>
+                                <artifactId>log4j-core</artifactId>
+                                <version>${log4j.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- logging framework related jars end -->
+
+                        <!-- apache poi related jars -->
+                        <dependency>
+                                <groupId>org.apache.poi</groupId>
+                                <artifactId>poi</artifactId>
+                                <version>${apache.poi.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.apache.poi</groupId>
+                                <artifactId>poi-ooxml</artifactId>
+                                <version>${apache.poi.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.apache.poi</groupId>
+                                <artifactId>poi-ooxml-schemas</artifactId>
+                                <version>${apache.poi.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.apache.poi</groupId>
+                                <artifactId>poi-excelant</artifactId>
+                                <version>${apache.poi.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.apache.xmlbeans</groupId>
+                                <artifactId>xmlbeans</artifactId>
+                                <version>${xmlbeans.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>stax</groupId>
+                                <artifactId>stax-api</artifactId>
+                                <version>${stax.api.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.github.virtuald</groupId>
+                                <artifactId>curvesapi</artifactId>
+                                <version>${curvesapi.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.apache.ant</groupId>
+                                <artifactId>ant</artifactId>
+                                <version>${apache.ant.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.apache.ant</groupId>
+                                <artifactId>ant-launcher</artifactId>
+                                <version>${apache.ant.version}</version>
+                        </dependency>
+                        <!-- apache poi related jars end -->
+                        <!-- Other apache jars -->
+
+                        <dependency>
+                                <groupId>org.apache.santuario</groupId>
+                                <artifactId>xmlsec</artifactId>
+                                <version>${apache.santuario.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <!-- Other apache jars end -->
+
+                        <!-- XML and JSON related jars -->
+                        <dependency>
+                                <groupId>org.javassist</groupId>
+                                <artifactId>javassist</artifactId>
+                                <version>${javassist.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.json</groupId>
+                                <artifactId>json</artifactId>
+                                <version>${org.json.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>quickfixj</groupId>
+                                <artifactId>quickfixj-all</artifactId>
+                                <version>${quickfixj.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>xml-apis</groupId>
+                                <artifactId>xml-apis</artifactId>
+                                <version>${xml.apis.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- XML and JSON related jars end -->
+                        <!-- Other related jars -->
+                        <dependency>
+                                <groupId>net.spy.memcached</groupId>
+                                <artifactId>memcached</artifactId>
+                                <version>${memcached.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.exolab.castor</groupId>
+                                <artifactId>castor</artifactId>
+                                <version>${exolab.castor.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.exolab.castor</groupId>
+                                <artifactId>castor-core</artifactId>
+                                <version>${exolab.castor.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>au.com.bytecode</groupId>
+                                <artifactId>opencsv</artifactId>
+                                <version>${opencsv.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.lowagie</groupId>
+                                <artifactId>itext</artifactId>
+                                <version>${lowagie.itext.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.jfree</groupId>
+                                <artifactId>jcommon</artifactId>
+                                <version>${jcommon.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.jfree</groupId>
+                                <artifactId>jfreechart</artifactId>
+                                <version>${jfreechart.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>net.sf.jasperreports</groupId>
+                                <artifactId>jasperreports</artifactId>
+                                <version>${jasperreports.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>junit</groupId>
+                                <artifactId>junit</artifactId>
+                                <version>${junit.default.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <!-- must be on the classpath -->
+                                <groupId>org.jacoco</groupId>
+                                <artifactId>org.jacoco.agent</artifactId>
+                                <classifier>runtime</classifier>
+                                <version>${jacoco.agent.version}</version>
+                                <scope>test</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>openfedlib</groupId>
+                                <artifactId>openfedlib</artifactId>
+                                <version>${openfedlib.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>opensso-sharedlib</groupId>
+                                <artifactId>opensso-sharedlib</artifactId>
+                                <version>${opensso.sharedlib.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>xalan</groupId>
+                                <artifactId>xalan</artifactId>
+                                <version>${xalan.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>idpdiscovery</groupId>
+                                <artifactId>idpdiscovery</artifactId>
+                                <version>${ipdiscovery.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.modelmapper</groupId>
+                                <artifactId>modelmapper</artifactId>
+                                <version>${modelmapper.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>org.noggit</groupId>
+                                <artifactId>noggit</artifactId>
+                                <version>${noggit.version}</version>
+                        </dependency>
+
+
+                        <!-- Other related jars end -->
+                        <!-- Maven Plugins start -->
+                        <dependency>
+                                <groupId>org.codehaus.mojo</groupId>
+                                <artifactId>buildnumber-maven-plugin</artifactId>
+                                <version>${buildnumbermaven.version}</version>
+                        </dependency>
+                        <!-- Maven Plugins end -->
+                        <!-- IBM related jars -->
+                        <dependency>
+                                <groupId>org.apache.ws.security</groupId>
+                                <artifactId>wss4j</artifactId>
+                                <version>${wss4j.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.javax</groupId>
+                                <artifactId>j2ee</artifactId>
+                                <version>${ibm.j2ee.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.ws</groupId>
+                                <artifactId>runtime</artifactId>
+                                <version>${ibm.runtime.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.ws.prereq</groupId>
+                                <artifactId>prereq</artifactId>
+                                <version>${ibm.prereq.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.ws.prereq</groupId>
+                                <artifactId>soap</artifactId>
+                                <version>${ibm.soap.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.ws.objectgrid</groupId>
+                                <artifactId>wsobjectgrid</artifactId>
+                                <version>${ibm.objectgrid.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.ibm.ws.sib</groupId>
+                                <artifactId>server</artifactId>
+                                <version>${ibm.server.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.mq.jmqi</groupId>
+                                <artifactId>jmqi</artifactId>
+                                <version>${ibm.jmqi.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.mq</groupId>
+                                <artifactId>mq</artifactId>
+                                <version>${ibm.mq.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.xml</groupId>
+                                <artifactId>logbrxml</artifactId>
+                                <version>${ibm.logbrxml.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.ws</groupId>
+                                <artifactId>jpa</artifactId>
+                                <version>${ibm.ws.jpa.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.ws.prereq</groupId>
+                                <artifactId>jaxrs</artifactId>
+                                <version>${ibm.jaxrs.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.ws.prereq</groupId>
+                                <artifactId>jackson</artifactId>
+                                <version>${ibm.jackson.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>COM.ibm.db2</groupId>
+                                <artifactId>jdbc</artifactId>
+                                <version>${ibm.db2.jdbc.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.ibm.xml</groupId>
+                                <artifactId>xss4j</artifactId>
+                                <version>${ibm.xss4j.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.ibm.mq.jms</groupId>
+                                <artifactId>mqjms</artifactId>
+                                <version>${ibm.mqjms.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- IBM related jars end -->
+
+                        <!-- FDSSO Lib Start -->
+                        <dependency>
+                                <groupId>com.sun</groupId>
+                                <artifactId>activation</artifactId>
+                                <version>${javax.activation.version}</version><!-- Version may not be correct, extracted from existing jar -->
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>org.owasp.esapi</groupId>
+                                <artifactId>esapiport</artifactId>
+                                <version>${esapi.version}</version><!-- Version may not be correct, extracted from existing jar -->
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.sun</groupId>
+                                <artifactId>idpdiscovery</artifactId>
+                                <version>${idpdiscovery.version}</version><!-- Version may not be correct, extracted from existing jar -->
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.sun</groupId>
+                                <artifactId>mail</artifactId>
+                                <version>${mail.version}</version><!-- Version may not be correct, extracted from existing jar -->
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>relaxngDatatype</groupId>
+                                <artifactId>relaxngDatatype</artifactId>
+                                <version>${relaxngDatatype.version}</version><!-- Version may not be correct, extracted from existing jar -->
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>javax.xml</groupId>
+                                <artifactId>webservices-api</artifactId>
+                                <version>${webservicesapi.version}</version><!-- Version may not be correct, extracted from existing jar -->
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.sun.xml.ws</groupId>
+                                <artifactId>webservices-rt</artifactId>
+                                <version>${webservicesrt.version}</version><!-- Version may not be correct, extracted from existing jar -->
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- <dependency>
+                                <groupId>xml-apis</groupId>
+                                <artifactId>xml-apis</artifactId>
+                                <version>${xml.apis.sso.version}</version>
+                                <scope>provided</scope>
+                        </dependency> -->
+                        <dependency>
+                                <groupId>org.apache.xerces</groupId>
+                                <artifactId>serializer</artifactId>
+                                <version>${apache.serialzer.sso.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.sun.xml.parsers</groupId>
+                                <artifactId>jaxp-ri</artifactId>
+                                <version>${jaxpri.sso.version}</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>xerces</groupId>
+                                <artifactId>xercesImpl</artifactId>
+                                <version>${xercesImpl.version}</version><!-- Version may not be correct, extracted from existing jar -->
+                                <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                                <groupId>xsdlib</groupId>
+                                <artifactId>xsdlib</artifactId>
+                                <version>${xsdlib.version}</version><!-- Version may not be correct, extracted from existing jar -->
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- FDSSO Lib end -->
+                        <dependency>
+                                <groupId>javax.validation</groupId>
+                                <artifactId>validation-api</artifactId>
+                                <version>1.0.0.GA</version>
+                                <scope>provided</scope>
+                        </dependency>
+                        <!-- FDX Libraries -->
+                        <dependency>
+                                <groupId>fdxObjectParser</groupId>
+                                <artifactId>fdxObjectParser</artifactId>
+                                <version>${fdxlibraries.op.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>fdxUnitTesting</groupId>
+                                <artifactId>fdxUnitTesting</artifactId>
+                                <version>${fdxlibraries.ut.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdUtil</artifactId>
+                                <version>${fdxlibraries.fu.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdQuote</artifactId>
+                                <version>${fdxlibraries.fq.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdPerformanceAccrual</artifactId>
+                                <version>${fdxlibraries.pa.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdEJB</artifactId>
+                                <version>${fdxlibraries.fe.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdPershingBulkOrder</artifactId>
+                                <version>${fdxlibraries.bo.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdLPLPreTrade</artifactId>
+                                <version>${fdxlibraries.pt.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdOrderVerifyCompliance</artifactId>
+                                <version>${fdxlibraries.vc.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdAppClients</artifactId>
+                                <version>${fdxlibraries.ac.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdPershingCrossTrading</artifactId>
+                                <version>${fdxlibraries.ct.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdBroadridgeWS</artifactId>
+                                <version>${fdxlibraries.bw.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>perOrdersPollEngine</artifactId>
+                                <version>${fdxlibraries.pe.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdPershingOrderProcessing</artifactId>
+                                <version>${fdxlibraries.po.version}</version>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>AFixOrderProcessor</artifactId>
+                                <version>${fdxlibraries.af.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>APartialAllocationProcess</artifactId>
+                                <version>${fdxlibraries.ap.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>BustOrderProcessor</artifactId>
+                                <version>${fdxlibraries.bp.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>CustodianOrderProcessor</artifactId>
+                                <version>${fdxlibraries.co.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdBenchMarksClient</artifactId>
+                                <version>${fdxlibraries.bc.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdBillingClients</artifactId>
+                                <version>${fdxlibraries.fb.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdBlendUpdate</artifactId>
+                                <version>${fdxlibraries.bu.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdBulkAllocationProcess</artifactId>
+                                <version>${fdxlibraries.ba.version}</version>
+                        </dependency>
+                        <!-- <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdClients</artifactId>
+                                <version>${fdxlibraries.version}</version>
+                        </dependency> -->
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdDynamicModelClient</artifactId>
+                                <version>${fdxlibraries.dm.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdOrderExpirationProcess</artifactId>
+                                <version>${fdxlibraries.ep.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdPendingTransactionPerformance</artifactId>
+                                <version>${fdxlibraries.tp.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdPerformanceClient</artifactId>
+                                <version>${fdxlibraries.fp.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdPeriodicFundTransfers</artifactId>
+                                <version>${fdxlibraries.ft.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdProcessFixMessages</artifactId>
+                                <version>${fdxlibraries.pf.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>MFOrderSweeper</artifactId>
+                                <version>${fdxlibraries.mf.version}</version>
+                        </dependency>
+                        <!-- <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdRebalanceScheduler</artifactId>
+                                <version>${fdxlibraries.version}</version>
+                        </dependency> -->
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdSecurityAllocationModelFileUploader</artifactId>
+                                <version>${fdxlibraries.sa.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdSlvBalAdjustment</artifactId>
+                                <version>${fdxlibraries.sl.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdTaxLotsAppClient</artifactId>
+                                <version>${fdxlibraries.tl.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdTradeExceptionSweeper</artifactId>
+                                <version>${fdxlibraries.te.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdTransactionAllocationProcess</artifactId>
+                                <version>${fdxlibraries.fa.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdWashSaleProcess</artifactId>
+                                <version>${fdxlibraries.ws.version}</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fixAllocationEngine</artifactId>
+                                <version>${fdxlibraries.ae.version}</version>
+                        </dependency>
+                        <!-- <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>MFOrderSweeper</artifactId>
+                                <version>${fdxlibraries.version}</version>
+                        </dependency> -->
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>wsWeb</artifactId>
+                                <version>${fdxlibraries.ww.version}</version>
+                                <type>war</type>
+                        </dependency>
+
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdSSO</artifactId>
+                                <version>${fdxlibraries.ss.version}</version>
+                                <type>war</type>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdWeb</artifactId>
+                                <version>${fdxlibraries.we.version}</version>
+                                <type>war</type>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>FDwsWeb</artifactId>
+                                <version>${fdxlibraries.eb.version}</version>
+                                <type>war</type>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdUser</artifactId>
+                                <version>${fdxlibraries.us.version}</version>
+                                <type>jar</type>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdEJB</artifactId>
+                                <version>${fdxlibraries.ej.version}</version>
+                                <type>ejb</type>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.fd.brokerage</groupId>
+                                <artifactId>fdOrderStub</artifactId>
+                                <version>${fdxlibraries.os.version}</version>
+                                <type>jar</type>
+                        </dependency>
+                        <!-- FDX Libraries end -->
+                </dependencies>
+        </dependencyManagement>
+        <build>
+                <pluginManagement>
+                        <plugins>
+                                <plugin>
+                                        <groupId>org.apache.maven.plugins</groupId>
+                                        <artifactId>maven-jar-plugin</artifactId>
+                                        <version>2.4</version>
+                                        <inherited>false</inherited>
+                                        <configuration>
+                                                <archive>
+                                                        <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+                                                </archive>
+                                        </configuration>
+                                        <executions>
+                                                <execution>
+                                                        <id>manifest-include</id>
+                                                        <phase>compile</phase>
+                                                </execution>
+                                        </executions>
+                                </plugin>
+                        </plugins>
+                </pluginManagement>
+        </build>
+
+        <modules>
+                <module>../fdxObjectParser</module>
+                <module>../fdxUnitTesting</module>
+                <module>../fdUtil</module>
+                <module>../fdQuote</module>
+                <module>../fdLPLPreTrade</module>
+                <module>../fdPershingBulkOrder</module>
+                <module>../fdPershingCrossTrading</module>
+                <module>../fdPershingOrderProcessing</module>
+                <module>../fdPerformanceAccrual</module>
+                <module>../fdEJB</module>
+                <module>../fdAppClients</module>
+                <module>../fdBroadridgeWS</module>
+                <module>../CustodianOrderProcessor</module>
+                <module>../fdOrderVerifyCompliance</module>
+                <module>../AFixOrderProcessor</module>
+                <module>../APartialAllocationProcess</module>
+                <module>../fdBenchMarksClient</module>
+                <module>../fdBlendUpdate</module>
+                <module>../fdBulkAllocationProcess</module>
+                <module>../fdDynamicModelClient</module>
+                <module>../fdOrderExpirationProcess</module>
+                <module>../fdPendingTransactionPerformance</module>
+                <module>../fdPeriodicFundTransfers</module>
+                <module>../fdProcessFixMessages</module>
+                <module>../fdTaxLotsAppClient</module>
+                <module>../fdTransactionAllocationProcess</module>
+                <module>../fdTradeExceptionSweeper</module>
+                <module>../fdOrderStub</module>
+                <module>../fdWeb</module>
+                <module>../fdPerformanceClient</module>
+                <module>../BustOrderProcessor</module>
+                <module>../fdSlvBalAdjustment</module>
+                <module>../fdWashSaleProcess</module>
+                <module>../FDwsWeb</module>
+                <module>../wsWeb</module>
+                <module>../perOrdersPollEngine</module>
+                <module>../MFOrderSweeper</module>
+                <module>../fdSecurityAllocationModelFileUploader</module>
+                <module>../fdUser</module>
+                <module>../fdBillingClients</module>
+                <module>../fixAllocationEngine</module>
+                <module>../PershingOrdersPollingEngine</module>
+                <module>../fdSSO</module>
+                <module>../fdStatic</module>
+                <module>../fdBrk</module>
+        </modules>
+</project>
