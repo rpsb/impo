@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.fd.brokerage</groupId>
+		<artifactId>fdBrokerage</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../fdBrokerage/pom.xml</relativePath>
+	</parent>
+	<artifactId>fdPerformanceAccrual</artifactId>
+	<name>FD PerformanceAccrual</name>
+	<description>FD PerformanceAccrual</description>
+	<version>${fdxlibraries.pa.version}</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.fd.brokerage</groupId>
+			<artifactId>fdUtil</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<archive>
+							<manifestEntries>
+								<Class-Path>fdUtil-${fdxlibraries.fu.version}.jar</Class-Path>
+								<SCM-Revision>${scm.revision}</SCM-Revision>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>scm.revision-maven-plugin</artifactId>
+					<version>1.4</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<!-- START SNIPPET: scm.revision -->
+			<!--<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>scm.revision-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<doCheck>false</doCheck>
+					<doUpdate>true</doUpdate>
+				</configuration>
+			</plugin>-->
+		</plugins>
+	</build>
+	<!--<scm>
+		<connection>scm:svn:http://10.11.100.160:85/folio/Brokerage</connection>
+		<developerConnection>scm:svn:http://10.11.100.160:85/folio/Brokerage</developerConnection>
+		<url>scm:svn:http://10.11.100.160:85/folio/Brokerage</url>
+	</scm>-->
+</project>

@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+	    <groupId>com.fd.brokerage</groupId>
+	    <artifactId>fdBrokerage</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	    <relativePath>../fdBrokerage/pom.xml</relativePath>
+	</parent>
+	<artifactId>fdOrderStub</artifactId>
+	<name>FD Order Stub</name>
+	<description>Order Stubs</description>
+	<version>${fdxlibraries.os.version}</version>
+	<dependencies>
+		<dependency>
+			<groupId>axis</groupId>
+			<artifactId>axis</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fd.brokerage</groupId>
+			<artifactId>fdUtil</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
